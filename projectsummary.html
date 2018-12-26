@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Angella Qian | Final Project Summary</title>
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<style>
+
+		h1 {
+			text-align: center;
+		}
+
+		body {
+			font-family: 'Montserrat', Arial, sans-serif;
+		    font-size: 0.9em;
+			background-color: #F0F0F0;
+			color: #283154;
+			line-height: 20px;
+			margin: 0;
+		}
+
+		hr {
+			margin: 30px 250px;
+		}
+
+		.content {
+			width: 700px;
+			margin: auto;
+			padding: 70px 50px;
+			background-color: #FFF;
+			border: 2px solid #000;
+		}
+
+		.prompt {
+			font-weight: 700;
+			margin: 20px 0px;
+		}
+
+		.response {
+			margin: 10px 0px 10px 50px;
+
+		}
+
+		.database-diagram {
+			border: 2px solid #000;
+			width: 90%;
+		}
+
+		.app-logo {
+			width: 80px;
+			margin-top: 20px;
+			margin-left: 300px;
+    	}
+
+	</style>
+</head>
+<body>
+
+	<div class="content">
+		<img class="app-logo" src="https://drive.google.com/uc?id=1ugPAZevKbXsINqOvfl8NstvLuPn1_GzQ" alt="App Icon">
+		<h1>RunCreator Project Summary</h1>
+		<hr>
+		
+		<div class="prompt">
+			1) Explain the topic and purpose of your site.
+		</div>
+		<div class="response">
+			The purpose of my website is to provide access to the custom routes entered onto RunCreator, an iOS app I'm designing in another class. Users are able to add their own routes, or just read and add reviews to existing ones. Meanwhile, admins can create, update, and delete any reviews that they wish to.
+		</div>
+
+		<div class="prompt">
+			2) Provide instructions on how your site works (admin credentials, password-protected pages, etc.).
+		</div>
+		<div class="response">
+			Admin Permissions Credentials
+			<ul>
+				<li>Username: &nbsp;&nbsp; admin</li>
+				<li>Password: &nbsp;&nbsp;&nbsp;&nbsp;admin</li>
+			</ul>
+			General User Permissions Credentials (or you can create your own account)
+			<ul>
+				<li>Username: &nbsp;&nbsp; student</li>
+				<li>Password: &nbsp;&nbsp;&nbsp;&nbsp;student</li>
+			</ul>
+			Password-Protected Pages
+			<ul>
+				<li>Delete.php, Add_Route.php, Add_Review.php, Edit_Form.php, and MyReviews.php are password-protected pages to ensure that users are logged in before they can access and edit data.</li>
+			</ul>
+		</div>
+
+		<div class="prompt">
+			3) Explain the source of your data.
+		</div>
+		<div class="response">
+			Data about the custom routes and their respective reviews have been stored in the database. This includes standard information about runs such as skill level, route name, distance, elevation gain, surface type, and city. I used various sources for my data, including: <a href="https://www.mapmyrun.com/us/los-angeles-ca/" target="_blank">Map My Run</a>,
+			<a href="https://www.google.com/maps" target="_blank">Google Maps</a>,
+			and <a href="https://runkeeper.com/search/routes?fromDate=&location=Los+Angeles%2C+CA%2C+USA&lon=-118.2500&activityType=RUN&lat=34.0500" target="_blank">Run Keeper</a>. On top of that, to implement user permissions and reviews on the website, I had to store information about users, access levels, and reviews.
+		</div>
+
+		<div class="prompt">
+			4) Attach Database Diagram (screenshot or link to the PDF file).
+		</div>
+		<div class="response">
+			<img class="database-diagram" src="https://drive.google.com/uc?id=1qj56fHznCf5Z10JBXPr-TDEX3wVcdsQg" alt="Database Diagram">
+		</div>
+
+		<div class="prompt">
+			5) Describe extras used. If API used, provide link to API documentation.
+		</div>
+		<div class="response">
+
+			<b>Frontend ↔ Backend AJAX ( JavaScript ↔ PHP )</b> 
+			<ul>
+				<li>Used on the Search Routes data table</li>
+				<li>Allows user to search via filters and receive results right away</li>
+			</ul>
+
+			<b>Different User Permission Levels</b>
+			<ul>
+				<li><i>General User</i>
+					<ul>
+						<li>Can create, read, update, and delete on their own reviews only</li>
+						<li>Can create and read routes</li>
+					</ul>
+				</li>
+				<li><i>Admin</i>
+					<ul>
+						<li>Can create, read, update, and delete on both their own and others' reviews</li>
+						<li>Can create and read routes</li>
+					</ul>
+				</li>
+			</ul>
+
+			<b>Pagination</b> 
+			<ul>
+				<li>Used on the Search Routes data table to help with legibility</li>
+				<li>Used on the My Reviews data table to help with legibility</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
